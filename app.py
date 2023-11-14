@@ -28,7 +28,7 @@ config_path = "/code/config.yaml"
 
 ## 指定种子文件的URL ##
 torrent_page = "aHR0cHM6Ly9vbmVqYXYuY29tL3BvcHVsYXIvP2phdj0x"
-
+days = 7
 
 ## 配置qbit ##
 qbit_conn = dict(
@@ -52,7 +52,7 @@ if os.path.exists(config_path):
         )
 
         torrent_page = data["torrents_page"]
-
+        days = data["days"]
 
 ## 判断是否 base64 处理过 ##
 def is_base64(data):
@@ -107,7 +107,7 @@ scheduler = BackgroundScheduler()
 scheduler.add_job(
     main_handle,
     "interval",
-    days=7,
+    days=days,
 )
 
 app = FastAPI()

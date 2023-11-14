@@ -1,0 +1,15 @@
+
+# 开始配置 qbit
+qbit:
+  host: "172.17.0.1"
+  port: 7070
+  username: "admin"
+  password: "admin"
+  savedir: "/downloads"
+
+# 开始配置需要处理的页面
+torrents_page: "aHR0cHM6Ly9vbmVqYXYuY29tL3BvcHVsYXIvP2phdj0x"
+
+
+# 开始配置请求频率，单位是天
+days: 7
